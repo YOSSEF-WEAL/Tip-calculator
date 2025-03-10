@@ -28,6 +28,7 @@ select {
   background-color: var(--placeHolder-color);
   font-weight: bold;
   width: 100%;
+  text-align: center;
 }
 input:focus,
 select:focus {
