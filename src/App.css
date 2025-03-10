@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+/* Import Google Fonts - Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --bg-body-color: #fcfdef;
+  --bg-contenr-color: #e0eb5f;
+  --txt-color: #1d4321;
+  --placeHolder-color: #f6f9f2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--bg-body-color);
+  color: var(--txt-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input,
+select {
+  border: none;
+  padding: 15px 10px;
+  border-radius: 5px;
+  background-color: var(--placeHolder-color);
+  font-weight: bold;
+  width: 100%;
+}
+input:focus,
+select:focus {
+  border: 1px solid var(--txt-color);
+}
+option {
+  font-weight: 500;
+}
+#root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  justify-content: flex-start;
+  margin-top: 20px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .header {
+    margin-bottom: 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+.minApp {
+  display: flex;
+  width: 60%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  /* margin: 10% 10%; */
+  gap: 20px;
+
+  .inputsApp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      label {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .countPeople {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        input {
+          width: 75%;
+        }
+        button {
+          width: 45px;
+          height: 45px;
+          background-color: var(--bg-contenr-color);
+          font-size: 22px;
+          font-weight: bold;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .outputsApp {
+    background-color: var(--bg-contenr-color);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .invoice {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px;
+      height: 100%;
+      .informReset {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        .number {
+          font-size: 35px;
+          font-weight: bold;
+        }
+        .text {
+          .pig {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          .smol {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    button {
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: var(--txt-color);
+      color: var(--bg-body-color);
+      font-size: 20px;
+      padding: 12px;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .minApp {
+    flex-direction: column;
+    width: 95%;
+    .outputsApp {
+      width: 100%;
+    }
   }
 }
