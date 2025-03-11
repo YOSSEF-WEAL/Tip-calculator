@@ -155,6 +155,7 @@ option {
     width: 95%;
     .outputsApp {
       width: 100%;
+      margin: 0;
     }
   }
 }
